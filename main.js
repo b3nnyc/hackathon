@@ -52,7 +52,7 @@ function on() {
   document.getElementById("overlay").style.display = "block";
   setTimeout(() => {
     off()
-  }, 1500);
+  }, 3000);
 }
 
 
