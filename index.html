@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>    <title>Astronomic Birthday</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>    <title>Astronomy Photo of the Day</title>
     <link rel="stylesheet" href="./styles/main.css">
   </head>
   <body>
@@ -12,11 +12,12 @@
         <a class="header__left" href="/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/NASA_Worm_logo.svg/1200px-NASA_Worm_logo.svg.png" alt="nasa logo"></a>
         <form id="form">
             <label for="chosendate">Input Date</label>
-            <input type="date" id="chosen__date" placeholder="YYYY-MM-DD" name="date">
-            <input type="submit" value="submit"></input>
+            <input class="form__box" type="date" id="chosen__date" placeholder="YYYY-MM-DD" name="date">
+            <input class="form__button" type="submit" onclick="on()" value="SUBMIT"></input>
         </form>
     </header>
     <main id="main">
+      <div id="overlay"><img id="overlay__image" src="./assets/images/64-647427_2d-rocket-png-transparent-png.png" alt=""></div>
         <div>
             <img class="main__left" alt="pic of the day">
         </div>
@@ -33,14 +34,14 @@
       <div class="footer__block">
         <h3 class="footer__title">Social Media</h3>
         <div class="footer__socials">
-          <a href="https://instagram.com"
-            ><img src="./assets/icons/icon-instagram.png" alt="instagram"
+          <a href="https://instagram.com/nasa/"
+            ><img src="./assets/images/icon-instagram.png" alt="instagram"
           /></a>
-          <a href="https://facebook.com"
-            ><img src="./assets/icons/icon-facebook.png" alt="facebook"
+          <a href="https://facebook.com/NASA"
+            ><img src="./assets/images/icon-facebook.png" alt="facebook"
           /></a>
-          <a href="https://twitter.com"
-            ><img src="./assets/icons/icon-twitter.png" alt="twitter"
+          <a href="https://twitter.com/NASA"
+            ><img src="./assets/images/icon-twitter.png" alt="twitter"
           /></a>
         </div>
       </div>
@@ -51,11 +52,12 @@
       <a href="/"
         ><img
           class="footer__logo-bottom"
-          src="./assets/icons/nasa-logo-web-rgb.png"
+          src="./assets/images/nasa-logo-web-rgb.png"
           alt=""
         />
       </a>
     </footer>
+
   </body>
   <script src="./main.js"></script>
 </html>
