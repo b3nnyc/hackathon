@@ -15,18 +15,21 @@ function api() {
           const imgTitle = result.data.title;
           const imgDate = result.data.date;
           const imgAuthor = result.data.copyright || "No author specified";
-          const img = result.data.hdurl;
+          const imgLink = result.data.hdurl;
 
           console.log(imgTitle, imgDate, imgAuthor)
+
+          function elementCreator(e){
+
+          }
+
         
         })
         .catch((error) => {
           console.log("Unsuccessful response", error);
           addErrorMessageToSearchResults();
         });
-    
     });
-  
   }
 
 api();
