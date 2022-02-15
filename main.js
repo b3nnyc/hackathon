@@ -18,18 +18,17 @@ function api() {
           const imgCopy = result.data.explanation;
           const imgLink = result.data.hdurl;
           
-          const mainElement = document.querySelector(".main")
-          const mainTitle = document.querySelector(".main__title").innerText(imgTitle)
-          const mainDate = document.querySelector(".main__date").innerText(imgDate)
-          const mainAuthor = document.querySelector(".main__author").innerText(imgAuthor)
-          const mainCopy = document.querySelector(".main__copy").innerText(imgCopy)
-          const mainImg = document.querySelector(".main__left").src=(imgLink)
-          
+          const mainElement = document.getElementById("main")
+          const mainTitle = document.querySelector(".main__title").innerText = imgTitle
+          const mainDate = document.querySelector(".main__date").innerText = imgDate
+          const mainAuthor = document.querySelector(".main__author").innerText = imgAuthor
+          const mainCopy = document.querySelector(".main__copy").innerText = imgCopy
+          const mainImg = document.querySelector(".main__left").src= imgLink
         })
         .catch((error) => {
             console.log("Unsuccessful response", error);
         });
     });
-  }
+}
 
 api();
