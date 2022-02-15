@@ -1,0 +1,88 @@
+@use "partials/mixins" as *;
+@use "partials/typography" as *;
+
+html {
+  background-color: rgba(255, 250, 245, 0.548);
+}
+
+.header {
+  display: flex;
+  height: 10rem;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  background-color: aliceblue;
+  border-bottom: 1px solid grey;
+
+  &__left img {
+    max-width: 30%;
+  }
+  form {
+    @include font(1.5vw, 2vw, 400);
+  }
+}
+
+#main {
+  display: flex;
+  align-items: center;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+.main {
+  &__left {
+    width: 45vw;
+    margin-left: 5%;
+  }
+  &__right {
+    max-width: 40%;
+    margin-right: 5%;
+    margin-left: 5%;
+  }
+  &__title {
+    @include font(3.5vw, 4vw, 600);
+    text-align: center;
+    margin: 0;
+  }
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  &__author {
+    @include font(2vw, 2vw, 400);
+  }
+  &__date {
+    @include font(1.5vw, 1.5vw, 400);
+  }
+  &__copy {
+    @include font(1.25vw, 2.5vw, 400);
+    text-align: center;
+  }
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: aliceblue;
+  border-top: 1px solid grey;
+
+  &__title {
+    @include font(3vw, 2vw, 600);
+    margin-bottom: 10%;
+  }
+  &__socials {
+    width: 15vw;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__copyright {
+    margin-top: 10%;
+    @include font(1vw, 1vw, 400);
+  }
+  &__logo-bottom {
+    width: 20vw;
+    float: right;
+  }
+}

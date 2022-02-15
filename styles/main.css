@@ -1,0 +1,117 @@
+@font-face {
+  font-family: "Avenir";
+  src: url(../assets/fonts/alternatives/AvenirNextLTPro.ttf), url(../assets/fonts/AvenirNextLTPro-Regular.otf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url(../assets/fonts/alternatives/AvenirNextLTProDemi.ttf), url(../assets/fonts/AvenirNextLTPro-Demi.otf);
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Avenir";
+  src: url(../assets/fonts/alternatives/AvenirNextLTProBold.ttf), url(../assets/fonts/AvenirNextLTPro-Bold.otf);
+  font-weight: 700;
+}
+html {
+  background-color: rgba(255, 250, 245, 0.548);
+}
+
+.header {
+  display: flex;
+  height: 10rem;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  background-color: aliceblue;
+  border-bottom: 1px solid grey;
+}
+.header__left img {
+  max-width: 30%;
+}
+.header form {
+  font-family: "Avenir";
+  font-size: 1.5vw;
+  line-height: 2vw;
+  font-weight: 400;
+}
+
+#main {
+  display: flex;
+  align-items: center;
+  padding-top: 5%;
+  padding-bottom: 5%;
+}
+
+.main__left {
+  width: 45vw;
+  margin-left: 5%;
+}
+.main__right {
+  max-width: 40%;
+  margin-right: 5%;
+  margin-left: 5%;
+}
+.main__title {
+  font-family: "Avenir";
+  font-size: 3.5vw;
+  line-height: 4vw;
+  font-weight: 600;
+  text-align: center;
+  margin: 0;
+}
+.main__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.main__author {
+  font-family: "Avenir";
+  font-size: 2vw;
+  line-height: 2vw;
+  font-weight: 400;
+}
+.main__date {
+  font-family: "Avenir";
+  font-size: 1.5vw;
+  line-height: 1.5vw;
+  font-weight: 400;
+}
+.main__copy {
+  font-family: "Avenir";
+  font-size: 1.25vw;
+  line-height: 2.5vw;
+  font-weight: 400;
+  text-align: center;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: aliceblue;
+  border-top: 1px solid grey;
+}
+.footer__title {
+  font-family: "Avenir";
+  font-size: 3vw;
+  line-height: 2vw;
+  font-weight: 600;
+  margin-bottom: 10%;
+}
+.footer__socials {
+  width: 15vw;
+  display: flex;
+  justify-content: space-between;
+}
+.footer__copyright {
+  margin-top: 10%;
+  font-family: "Avenir";
+  font-size: 1vw;
+  line-height: 1vw;
+  font-weight: 400;
+}
+.footer__logo-bottom {
+  width: 20vw;
+  float: right;
+}/*# sourceMappingURL=main.css.map */

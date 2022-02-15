@@ -5,10 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>    <title>Astronomic Birthday</title>
+    <link rel="stylesheet" href="./styles/main.css">
   </head>
   <body>
-    <header>
-        <a href="/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/NASA_Worm_logo.svg/1200px-NASA_Worm_logo.svg.png" alt="nasa logo"></a>
+    <header class="header">
+        <a class="header__left" href="/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/NASA_Worm_logo.svg/1200px-NASA_Worm_logo.svg.png" alt="nasa logo"></a>
         <form id="form">
             <label for="chosendate">Input Date</label>
             <input type="date" id="chosen__date" placeholder="YYYY-MM-DD" name="date">
@@ -21,100 +22,39 @@
         </div>
         <div class="main__right">
             <h2 class="main__title"></h2>
-            <h3 class="main__author"></h3>
-            <h4 class="main__date"></h4>
+            <div class="main__header">
+              <h3 class="main__author"></h3>
+              <h4 class="main__date"></h4>
+            </div>
             <p class="main__copy"></p>
         </div>
     </main>
-    <footer class="oit-footer oit-footer-medium" role="contentinfo">
-      <div class="oit-footer-primary-section">
-        <div class="oit-grid">
-          <nav class="oit-footer-nav">
-            <ul class="oit-unstyled-list">
-              <li class="oit-width-one-third oit-footer-primary-content">
-                <div class="oit-footer-primary-link">
-                  <a href="https://code.nasa.gov">code.nasa.gov</a>
-                </div>
-              </li>
-              <li class="oit-width-one-third oit-footer-primary-content">
-                <div class="oit-footer-primary-link">
-                  <a href="https://data.nasa.gov">data.nasa.gov</a>
-                </div>
-              </li>
-              <li class="oit-width-one-third oit-footer-primary-content">
-                <div class="oit-footer-primary-link">
-                  <a href="https://api.nasa.gov">api.nasa.gov</a>
-                </div>
-              </li>
-              <!--               <li class="oit-width-one-fourth oit-footer-primary-content">
-                      <div class="oit-footer-primary-link" ><a href="https://open.nasa.gov">open.nasa.gov</a></div>
-                    </li> -->
-            </ul>
-          </nav>
+    <footer class="footer">
+      <div class="footer__block">
+        <h3 class="footer__title">Social Media</h3>
+        <div class="footer__socials">
+          <a href="https://instagram.com"
+            ><img src="./assets/icons/icon-instagram.png" alt="instagram"
+          /></a>
+          <a href="https://facebook.com"
+            ><img src="./assets/icons/icon-facebook.png" alt="facebook"
+          /></a>
+          <a href="https://twitter.com"
+            ><img src="./assets/icons/icon-twitter.png" alt="twitter"
+          /></a>
         </div>
       </div>
-
-      <div class="oit-footer-secondary_section">
-        <div class="oit-grid">
-          <div class="oit-footer-logo oit-width-one-half">
-            <img
-              class="oit-footer-logo-img"
-              src="assets/footer/img/favicon-192.png"
-              alt=""
-            />
-            <h3 class="oit-footer-logo-heading">Open Innovation Team</h3>
-            <address>
-              <div class="oit-footer-primary-content oit-footer-contact_info">
-                <p>
-                  <a
-                    href="https://www.nasa.gov/about/highlights/HP_Privacy.html"
-                    >Privacy</a
-                  >
-                </p>
-              </div>
-              <div class="oit-footer-primary-content oit-footer-contact_info">
-                <p><a href="https://www.nasa.gov/FOIA/index.html">FOIA</a></p>
-              </div>
-              <div
-                class="oit-footer-primary-content oit-special"
-                style="margin-left: 12px !important; display: inline-block"
-              >
-                <p>
-                  NASA Officials:
-                  <a
-                    class="oit-footer-contact_info"
-                    href="mailto:jason.duley@nasa.gov"
-                    >Jason Duley</a
-                  >
-                </p>
-              </div>
-            </address>
-          </div>
-          <div class="oit-footer-contact-links oit-width-one-half">
-            <a
-              class="oit-link-twitter"
-              href="https://twitter.com/opennasa?lang=en"
-            >
-              <span>Twitter</span>
-            </a>
-            <a class="oit-link-github" href="https://github.com/nasa">
-              <span>GitHub</span>
-            </a>
-            <h3 class="oit-footer-contact-heading">
-              Office of the Chief Information Officer
-            </h3>
-            <address>
-              <div class="oit-footer-primary-content oit-footer-contact_info">
-                <p>
-                  <a _ngcontent-c9="" href="mailto:nasa-data@lists.arc.nasa.gov"
-                    >nasa-data@lists.arc.nasa.gov</a
-                  >
-                </p>
-              </div>
-            </address>
-          </div>
-        </div>
-      </div>
+      
+      <p class="footer__copyright">
+        Copyright National Aeronautics and Space Administration © 2022 All Rights Reserved
+      </p>
+      <a href="/"
+        ><img
+          class="footer__logo-bottom"
+          src="./assets/icons/nasa-logo-web-rgb.png"
+          alt=""
+        />
+      </a>
     </footer>
   </body>
   <script src="./main.js"></script>
