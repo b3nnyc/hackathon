@@ -25,13 +25,17 @@ body {
   display: flex;
   height: 10rem;
   align-items: center;
-  justify-content: space-evenly;
-  width: 100%;
+  justify-content: space-between;
   background-color: aliceblue;
   border-bottom: 1px solid grey;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+.header__left {
+  max-width: 25%;
 }
 .header__left img {
-  max-width: 30%;
+  max-width: 90%;
 }
 .header form {
   font-family: "Avenir";
@@ -76,6 +80,7 @@ body {
 .main__left {
   width: 45vw;
   margin-left: 5%;
+  border-radius: 3px;
 }
 .main__right {
   max-width: 40%;
@@ -165,8 +170,8 @@ body {
   margin: auto;
   margin-top: 20%;
   max-width: 25vw;
-  -webkit-animation: slidein 2s;
-          animation: slidein 2s;
+  -webkit-animation: slidein 3s;
+          animation: slidein 3s;
 }
 @-webkit-keyframes slidein {
   from {
