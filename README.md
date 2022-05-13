@@ -1,5 +1,5 @@
-# 24-hour Hackathon Project
-This web app is hackathon project that shows daily photographic report by NASA.
+# Hackathon Project
+This web app is a 24-hour hackathon project that shows daily photographic report by NASA.
 
 ## Built With
 - HTML/CSS
