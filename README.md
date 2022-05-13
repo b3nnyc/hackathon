@@ -9,7 +9,7 @@ This web app is a 24-hour hackathon project that shows daily photographic report
 - NASA API
 
 ## Live Demo
-(https://replit.com/@kossySteve/TicTac-Toe-1#.replit)
+(https://nasareports.netlify.app/)
 
 
 👤 **Authors**
