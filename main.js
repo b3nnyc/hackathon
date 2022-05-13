@@ -31,18 +31,22 @@ const todayApi = () => {
   callApi(API_URL);
 };
 
-function api() {
+function datedApi() {
   form.addEventListener("submit", (event) => {
     event.preventDefault();
     //searchResultsEl.innerHTML = "";
     const searchTerm = event.target.date.value;
-    const newApi = `${API_URL}&date=${searchTerm}`;
-    callApi(newApi);
+    if (new Date() >= new Date(searchTerm).getTime()) {
+      const newApi = `${API_URL}&date=${searchTerm}`;
+      callApi(newApi);
+    } else {
+      Swal.fire("No Photographic reports for future dates!!!", "Check back later", "warning");
+    }
     event.target.reset();
   });
 }
 
-api() || todayApi();
+datedApi() || todayApi();
 
 function off() {
   document.getElementById("overlay").style.display = "none";
@@ -51,8 +55,6 @@ function off() {
 function on() {
   document.getElementById("overlay").style.display = "block";
   setTimeout(() => {
-    off()
+    off();
   }, 3000);
 }
-
-
