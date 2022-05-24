@@ -1,14 +1,20 @@
 const API_URL =
   "https://api.nasa.gov/planetary/apod?api_key=AEp43Nh1HaBkWgmooQhPNAcumFH5EqfncAcUBMB4";
+let chosenDate;
+function format(str) {
+  return str
+    .split(".")
+    .map((sentence, i) => (i % 3 === 0 && i != 0 ? sentence + ".\n" : sentence))
+    .join("");
+}
 function callApi(url) {
   axios
     .get(url)
     .then((result) => {
-      console.log("Successful response", result);
-
+      on();
       const imgTitle = result.data.title;
       const imgDate = result.data.date;
-      const imgAuthor = result.data.copyright || "No author specified";
+      const imgAuthor = result.data.copyright || "nasa.gov";
       const imgCopy = result.data.explanation;
       const imgLink = result.data.hdurl;
 
@@ -16,11 +22,11 @@ function callApi(url) {
         imgTitle);
       const mainDate = (document.querySelector(".main__date").innerText =
         imgDate);
-      const mainAuthor = (document.querySelector(".main__author").innerText =
+      const mainAuthor = (document.querySelector(".main__author").innerText = 'by '+
         imgAuthor);
       const mainCopy = (document.querySelector(".main__copy").innerText =
-        imgCopy);
-      const mainImg = (document.querySelector(".main__left").src = imgLink);
+        format(imgCopy));
+      const mainImg = (document.querySelector(".main__img").src = imgLink);
     })
     .catch((error) => {
       console.log("Unsuccessful response", error);
@@ -36,11 +42,17 @@ function datedApi() {
     event.preventDefault();
     //searchResultsEl.innerHTML = "";
     const searchTerm = event.target.date.value;
+    chosenDate = searchTerm;
     if (new Date() >= new Date(searchTerm).getTime()) {
       const newApi = `${API_URL}&date=${searchTerm}`;
       callApi(newApi);
+      off();
     } else {
-      Swal.fire("No Photographic reports for future dates!!!", "Check back later", "warning");
+      Swal.fire(
+        "No Photographic reports for future dates!!!",
+        "Check back later",
+        "warning"
+      );
     }
     event.target.reset();
   });
@@ -54,7 +66,6 @@ function off() {
 
 function on() {
   document.getElementById("overlay").style.display = "block";
-  setTimeout(() => {
-    off();
-  }, 3000);
+  setTimeout(()=>off(), 3000);
+
 }

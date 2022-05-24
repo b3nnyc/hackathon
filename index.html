@@ -5,51 +5,69 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>    
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <title>Astronomy Photo of the Day</title>
-    <link rel="stylesheet" href="./styles/main.css">
+    <link rel="stylesheet" href="./styles/main.css" />
   </head>
   <body>
     <header class="header">
-        <a class="header__left" href="/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/NASA_Worm_logo.svg/1200px-NASA_Worm_logo.svg.png" alt="nasa logo"></a>
-        <form id="form">
-            <label for="chosendate">Choose present or past date</label>
-            <input class="form__input" type="date" id="chosen__date" placeholder="YYYY-MM-DD" name="date">
-            <input class="form__button" type="submit"  value="view"/>
-        </form>
+      <a class="header__left" href="/"
+        ><img
+          src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/NASA_Worm_logo.svg/1200px-NASA_Worm_logo.svg.png"
+          alt="nasa logo"
+      /></a>
+      <form id="form">
+        <label class="header__text" for="chosendate">Choose present or past date</label>
+        <input
+          class="form__input"
+          type="date"
+          id="chosen__date"
+          placeholder="YYYY-MM-DD"
+          name="date"
+        />
+        <input class="form__button" type="submit"  value="view" />
+      </form>
     </header>
     <main id="main">
-      <div id="overlay"><img id="overlay__image" src="./assets/images/64-647427_2d-rocket-png-transparent-png.png" alt=""></div>
-        <div>
-            <img class="main__left" alt="pic of the day">
+      <div id="overlay">
+        <img
+          id="overlay__image"
+          src="./assets/images/64-647427_2d-rocket-png-transparent-png.png"
+          alt=""
+        />
+      </div>
+      <section class="main__box">
+        <div class="main__left">
+          <img class="main__img" alt="pic of the day" />
         </div>
         <div class="main__right">
-            <h2 class="main__title"></h2>
-            <div class="main__header">
-              <h3 class="main__author"></h3>
-              <h4 class="main__date"></h4>
-            </div>
-            <p class="main__copy"></p>
+          <h2 class="main__title"></h2>
+          <div class="main__header">
+            <h3 class="main__author"></h3>
+            <h4 class="main__date"></h4>
+          </div>
+          <p class="main__copy"></p>
         </div>
+      </section>
     </main>
     <footer class="footer">
       <div class="footer__block">
-        <h3 class="footer__title">Social Media</h3>
         <div class="footer__socials">
-          <a href="https://instagram.com/nasa/"
-            ><img src="./assets/images/icon-instagram.png" alt="instagram"
+          <a href="https://instagram.com/nasa/" target="_blank" 
+            ><img src="./assets/images/icon-instagram.png" class="footer__socials--logo" alt="instagram"
           /></a>
-          <a href="https://facebook.com/NASA"
-            ><img src="./assets/images/icon-facebook.png" alt="facebook"
+          <a href="https://facebook.com/NASA" target="_blank" 
+            ><img src="./assets/images/icon-facebook.png" class="footer__socials--logo-mid" alt="facebook"
           /></a>
-          <a href="https://twitter.com/NASA"
-            ><img src="./assets/images/icon-twitter.png" alt="twitter"
+          <a href="https://twitter.com/NASA" target="_blank" 
+            ><img src="./assets/images/icon-twitter.png" class="footer__socials--logo" alt="twitter"
           /></a>
         </div>
       </div>
-      
+
       <p class="footer__copyright">
-        Copyright National Aeronautics and Space Administration © 2022 All Rights Reserved
+        Copyright National Aeronautics and Space Administration © 2022 All
+        Rights Reserved
       </p>
       <a href="/"
         ><img
@@ -59,7 +77,6 @@
         />
       </a>
     </footer>
-
   </body>
   <script src="./main.js"></script>
 </html>
